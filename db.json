@@ -1,0 +1,10 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Product 1 update",
+      "price": 100,
+      "description": "Sản phẩm tốt"
+    }
+  ]
+}
