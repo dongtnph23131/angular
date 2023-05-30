@@ -1,15 +1,15 @@
-<div class="container">
+<div class="container pt-5">
     <table class="table table-bordered">
-         <thead>
+        <thead>
             <tr>
                 <th>STT</th>
-                <th>Tên Sản Phẩm</th>
-                <th>Giá Sản Phẩm</th>
-                <th>Mô tả</th>
+                <th>Tên sản phẩm</th>
+                <th>Giá sản phẩm</th>
+                <th>Mô tả sản phẩm</th>
                 <th>Thao tác</th>
             </tr>
-         </thead>
-         <tbody>
+        </thead>
+        <tbody>
             <tr *ngFor="let product of products,index as i">
                 <td>{{i+1}}</td>
                 <td>{{product.name}}</td>
@@ -17,9 +17,9 @@
                 <td>{{product.description}}</td>
                 <td>
                     <button class="btn btn-danger" (click)="removeHandler(product.id)">Remove</button>
-                    <button class="btn btn-info">Edit</button>
+                    <button  class="btn btn-info">Edit</button>
                 </td>
             </tr>
-         </tbody>
+        </tbody>
     </table>
 </div>

@@ -1,17 +1,17 @@
-<div class="container">
-    <form (ngSubmit)="addHandler()" [formGroup]="productForm">
+<div class="container pt-5">
+    <form (ngSubmit)="addHandler()"  [formGroup]="productForm">
         <div class="mb-3">
             <label>Tên sản phẩm</label>
-            <input formControlName="name" type="text" class="form-control"/>
+            <input class="form-control" type="text" formControlName="name" />
         </div>
         <div class="mb-3">
             <label>Giá sản phẩm</label>
-            <input  formControlName="price" type="text" class="form-control"/>
+            <input class="form-control" type="text" formControlName="price"/>
         </div>
         <div class="mb-3">
             <label>Mô tả sản phẩm</label>
-            <input  formControlName="description" type="text" class="form-control"/>
+            <input class="form-control" type="text" formControlName="description"/>
         </div>
-        <button class="btn btn-primary" type="submit">Thêm sản phẩm</button>
+        <button class= "btn btn-primary">Thêm sản phẩm</button>
     </form>
 </div>

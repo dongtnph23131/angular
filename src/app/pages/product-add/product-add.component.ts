@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, FormControl } from "@angular/forms"
 import { ProductService } from 'src/app/services/product.service';
-import { FormBuilder, FormControl, FormGroup } from "@angular/forms"
-import { IProduct } from 'src/app/interfaces/product';
-import { Router } from "@angular/router"
+import { IProduct } from 'src/interfaces/product';
+import {Router} from "@angular/router"
 @Component({
   selector: 'app-product-add',
   templateUrl: './product-add.component.html',
@@ -14,18 +14,17 @@ export class ProductAddComponent {
     price: [0],
     description: ['']
   })
-  constructor(private productService: ProductService, private formBuilder: FormBuilder, private router: Router) {
+  constructor(private formBuilder: FormBuilder, private productService: ProductService,private router:Router) {
 
   }
   addHandler() {
     const product: IProduct = {
-      name: this.productForm.value.name || '',
+      name: this.productForm.value.name || "",
       price: this.productForm.value.price || 0,
-      description: this.productForm.value.description || ''
+      description: this.productForm.value.description || "",
     }
     this.productService.addProduct(product).subscribe(product => {
-      console.log(product);
-      this.router.navigate(['products'])
+      this.router.navigate(["products"])
     })
   }
 }

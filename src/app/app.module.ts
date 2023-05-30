@@ -6,7 +6,8 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProductListComponent } from './pages/product-list/product-list.component';
 import {HttpClientModule} from "@angular/common/http";
 import { ProductAddComponent } from './pages/product-add/product-add.component'
-import {ReactiveFormsModule,FormsModule} from "@angular/forms";
+import {ReactiveFormsModule} from "@angular/forms"
+import {FormsModule} from "@angular/forms";
 import { ProductEditComponent } from './pages/product-edit/product-edit.component'
 @NgModule({
   declarations: [

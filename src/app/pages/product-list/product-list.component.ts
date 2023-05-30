@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IProduct } from 'src/app/interfaces/product';
 import { ProductService } from 'src/app/services/product.service';
+import { IProduct } from 'src/interfaces/product';
 
 @Component({
   selector: 'app-product-list',
@@ -15,11 +15,10 @@ export class ProductListComponent {
     })
   }
   removeHandler(id: any) {
-    if (confirm('Bạn có muốn xóa không?')) {
-      this.productService.deleteProduct(id).subscribe(() => {
-        console.log('Xóa sản phẩm thành công');
-         this.products=this.products.filter(product=>product.id!==id)
-      }) 
+    if (confirm('Bạn có muốn xóa không ?')) {
+      this.productService.deleteProductById(id).subscribe(() => {
+        this.products = this.products.filter(product => product.id !== id)
+      })
     }
   }
 }

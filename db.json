@@ -2,9 +2,15 @@
   "products": [
     {
       "id": 1,
-      "name": "Product 1 update",
+      "name": "Product 1",
       "price": 100,
       "description": "Sản phẩm tốt"
+    },
+    {
+      "name": "qwnwqkncxqw",
+      "price": "100",
+      "description": "wqmldqwldmx",
+      "id": 2
     }
   ]
 }
